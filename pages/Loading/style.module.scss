@@ -1,0 +1,48 @@
+.header {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+    .block {
+        max-width: 610px;
+
+        min-height: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 20px;
+        box-shadow: 0 0 5px rgb(0, 0, 0);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+
+        .image {
+            max-width: 250px;
+            margin: 0 auto;
+
+            max-height: 250px;
+            border-radius: 50%;
+        }
+        .AiOutlineClose {
+            font-size: 26px;
+            position: absolute;
+            color: rgb(252, 252, 252);
+        }
+        .info {
+            position: relative;
+            margin-top: 180px;
+            max-width: 500px;
+            p{
+                padding: 10px;
+                font-size: 20px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
