@@ -3,10 +3,12 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.scss";
 import { FC, useEffect, useState } from "react";
+import { a } from "./types/types";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Home: FC = () => {
+const [first, setfirst] = useState<a>()
   return (
     <>
       <Head>
