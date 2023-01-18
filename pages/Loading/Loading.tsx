@@ -10,25 +10,16 @@ const Loading: FC<Person> = ({ onClick }) => {
   return (
     <div className={s.header}>
       <div className={s.block}>
-        <Image
-          src="/ernis.jpg"
-          
-          className={s.image}
-          layout="fill"
-          
-          alt="/"
-        />
-        
-          <div className={s.info}>
-       <p>
-       Добро пожаловать Меня зовут Эрнис  я фронтенд разработчик  <em/>Здесь вы можете увидеть мои проекты
-       </p>
-         
-       </div>
-       <AiOutlineClose  onClick={onClick} className={s.AiOutlineClose} />
-        <div>
-       
+        <Image src="/ernis.jpg" className={s.image} layout="fill" alt="/" />
+
+        <div className={s.info}>
+          <p>
+            Добро пожаловать Меня зовут Эрнис я фронтенд разработчик 
+            Здесь вы можете увидеть мои проекты
+          </p>
         </div>
+        <AiOutlineClose onClick={onClick} className={s.AiOutlineClose} />
+      
       </div>
     </div>
   );

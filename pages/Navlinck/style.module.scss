@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Raleway:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+.header {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    background: #2A2A2A;
+    justify-content: center;
+    .menu{
+      max-width: 1200px;
+      justify-content: space-around;
+      display: flex;
+      position: random($limit: 3);
+      z-index: 0;
+      margin: 0 auto;
+      .block_menu{
+        color: aliceblue;
+        h1{
+            font-family: 'Moon Dance', cursive;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            font-size: 20px;
+            font-style: normal;
+        }
+      }
+     .lincks{
+        
+        margin-top: 20px;
+        .linck{
+            font-family: 'Crimson Text', serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            inset: 2;
+            color: #E4E4E4;
+            margin-left: 20px;
+            text-decoration: none;
+            opacity: 0.8;
+            &:hover{
+                opacity: 1.8;
+            }
+            &:active{
+                color: rgb(0, 200, 255);
+            }
+        }
+     }
+    }
+}

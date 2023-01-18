@@ -1,23 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import { FC, useEffect, useState } from "react";
-import Loading from "./Loading/Loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Home: FC = () => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // setTimeout(() => {
-    //   setLoading(false)
-    // }, 5000);
-  }, []);
-
-  let LoadingFa =()=>{
-    setLoading(false)
-  }
   return (
     <>
       <Head>
@@ -26,14 +15,36 @@ const Home: FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {loading ? (
-        <div className={styles.Loading}>
-          <Loading  onClick={LoadingFa}/>
-          
+      <div className={styles.header}>
+        <div className={styles.block}>
+          <div className={styles.info}>
+            <p>Привет</p>
+            <h2>
+              Я Эрнис <br />
+              Исманалиев
+            </h2>
+            <h5>
+              Добро пожаловать Меня зовут Эрнис я фронтенд разработчик Здесь вы
+              можете <br /> увидеть мои проекты
+            </h5>
+            <button>проекты</button>
+          </div>
         </div>
-      ) : (
-        <h1>ernis</h1>
-      )}
+        <div className={styles.block2}>
+          <div className={styles.block2_block}>
+            <Image
+              src="/image.png"
+              className={styles.image}
+              width={390}
+              height={400}
+              alt="/"
+            />
+            <div className={styles.block2_block2}>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

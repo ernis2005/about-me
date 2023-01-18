@@ -1,0 +1,122 @@
+.Loading {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    .block {
+        width: 49%;
+        .info {
+            text-align: left;
+            font-family: "NEXT ART";
+            padding-left: 10px;
+            text-transform: uppercase;
+            p {
+                color: #e4e4e4;
+                letter-spacing: 2px;
+                font-size: 26px;
+            }
+            h2 {
+                font-size: 40px;
+                color: #e4e4e4;
+                font-weight: 700;
+                letter-spacing: 2px;
+                margin: 0;
+            }
+            h5 {
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 21px;
+                opacity: 0.9;
+                color: #e4e4e4;
+                text-transform: capitalize;
+            }
+            button {
+                background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);
+                box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+                border-radius: 6px;
+                font-weight: 700;
+                height: 40px;
+                border: none;
+                width: 150px;
+            }
+        }
+    }
+    .block2 {
+        width: 49%;
+        .image {
+            max-height: 450px;
+            max-width: 300px;
+            position: absolute;
+            z-index: 2;
+            margin-left: -120px;
+            margin-top: -35px;
+        }
+        .block2_block {
+            width: 350px;
+            height: 350px;
+            background-color: #00c4f0;
+            margin-top: 50px;
+            border-radius: 50%;
+            justify-content: center;
+            border: 10px solid #00c4f0;
+            filter: drop-shadow(0px 0px 152px rgba(0, 196, 240, 0.42));
+            .block2_block2 {
+                background-color: black;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                position: absolute;
+                margin-top: 25px;
+                margin-left: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 801px) {
+    .header {
+        display: block;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .block {
+            position: relative;
+            z-index: 2;
+            .info {
+                h5 {
+                    color: wheat;
+                    opacity: 1;
+                    text-shadow: 0 0 10px black;
+                }
+            }
+        }
+        .block2 {
+         position: relative;
+            margin-top: -340px;
+            z-index: 0;
+            margin-left: 100px;
+        }
+    }
+}
+@media screen and (max-width: 485px) {
+    .info {
+        font-size: 24px;
+        h2 {
+            font-size: 35px;
+        }
+    }
+    .block2 {
+        position: relative;
+        margin-top: -380px;
+        z-index: 1;
+
+        
+    }
+}
