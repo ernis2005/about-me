@@ -92,7 +92,7 @@ const Block_skills_cards: FC = () => {
       },
       {
         info: "Tailwindcss",
-        id: 10,
+        id: 11,
         icon: <  SiTailwindcss />,
         a: "https://tailwindui.com/templates?ref=sidebar",
       },
