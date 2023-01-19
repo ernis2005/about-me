@@ -4,7 +4,6 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.scss";
 import { FC, useEffect, useState } from "react";
 import Block_skills_cards from "./components/Block_skills_cards";
-import { Portfolio } from "./components/Portfolio";
 
 
 const inter = Inter({ subsets: ["latin"] });
