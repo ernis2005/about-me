@@ -8,8 +8,17 @@ const D = () => {
 }
 
 export default D
-export interface a{
-  let :number
+export interface Portfoli{
+  id:number;
+iamg:any;
+info:string;
+a:string
+}
+export interface skills{
+  info:string,
+  icon:any,
+  id:number,
+  a:string,
 }
 
 

@@ -3,12 +3,13 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.scss";
 import { FC, useEffect, useState } from "react";
-import { a } from "./types/types";
+import Block_skills_cards from "./components/Block_skills_cards";
+import { Portfolio } from "./components/Portfolio";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Home: FC = () => {
-const [first, setfirst] = useState<a>()
   return (
     <>
       <Head>
@@ -29,7 +30,7 @@ const [first, setfirst] = useState<a>()
               Добро пожаловать Меня зовут Эрнис я фронтенд разработчик Здесь вы
               можете <br /> увидеть мои проекты
             </h5>
-            <button>проекты</button>
+            <button><a target="_blan" href="https://github.com/ernis2005?tab=repositories">проекты</a></button>
           </div>
         </div>
         <div className={styles.block2}>
@@ -45,6 +46,14 @@ const [first, setfirst] = useState<a>()
               <div></div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={styles.header2}>
+        <div className={styles.block_skills}>
+          <Block_skills_cards />
+        </div>
+        <div className={styles.bloc_Projects}>
+      
         </div>
       </div>
     </>

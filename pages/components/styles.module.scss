@@ -1,0 +1,49 @@
+.skills{
+    color: aqua;
+    margin: 0 auto ;
+    font-size: 25px;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+.Block_skills_cards {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    flex-wrap: wrap;
+
+    margin: auto;
+    div {
+
+        width: 150px;
+        position: relative;
+        z-index: 1;
+        height: 150px;
+        background-color: #2a2a2a;
+        padding: 25px;
+        margin-left: 10px;
+        border-radius: 29px;
+        margin-top: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+   transform: rotate(0.3);
+        &:hover{
+       transition: 1.5s;
+         background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);
+      
+        }
+        a{
+            border: none;
+            text-decoration: none;
+        }
+        samp {
+            color: aqua;
+            margin-top: 15px;
+            font-size: 55px;
+        }
+        p {
+            color: aqua;
+            text-transform: capitalize;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+    }
+}
