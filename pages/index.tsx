@@ -35,7 +35,7 @@ const Home: FC = () => {
         <div className={styles.block2}>
           <div className={styles.block2_block}>
             <Image
-              src="/image.png"
+              src="/ernis2.png"
               className={styles.image}
               width={390}
               height={400}
