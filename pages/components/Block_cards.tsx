@@ -37,11 +37,10 @@ const Block_cards: FC<Person> = ({ daa }) => {
              modules={[EffectCoverflow, Pagination]}
       >
         {daa.map((res) => (
-          <SwiperSlide key={res.data.key}>
-             <SwiperSlide className={s.swiperslide}>
+      
+             <SwiperSlide key={res.data.key} className={s.swiperslide}>
           <img src={res.data.image2}/>
         </SwiperSlide>
-          </SwiperSlide>
         ))}
       </Swiper>
     </div>
