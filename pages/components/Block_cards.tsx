@@ -36,42 +36,13 @@ const Block_cards: FC<Person> = ({ daa }) => {
                 className={s.mySwipe}
              modules={[EffectCoverflow, Pagination]}
       >
-        {/* {daa.map((res) => (
+        {daa.map((res) => (
           <SwiperSlide key={res.data.key}>
-            
-            <div>
-              {res.data.emal2}
-            </div>
+             <SwiperSlide className={s.swiperslide}>
+          <img src={res.data.image2}/>
+        </SwiperSlide>
           </SwiperSlide>
-          
-        ))} */}
-  <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}> 
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
