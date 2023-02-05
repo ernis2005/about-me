@@ -5,10 +5,24 @@ import styles from "../styles/Home.module.scss";
 import { FC, useEffect, useState } from "react";
 import Block_skills_cards from "./components/Block_skills_cards";
 
-
 const inter = Inter({ subsets: ["latin"] });
+import axios from "axios";
+import Block_cards from "./components/Block_cards";
 
-const Home: FC = () => {
+const Home: FC<any> = ({ daa }) => {
+  useEffect(() => {
+    setfirst(() => {
+      return Object.keys(daa).map((key) => {
+        return {
+          ...daa[key],
+          id: key,
+        };
+      });
+    });
+  }, []);
+  const [first, setfirst] = useState<any[]>([]);
+
+  console.log(first);
   return (
     <>
       <Head>
@@ -29,7 +43,14 @@ const Home: FC = () => {
               Добро пожаловать Меня зовут Эрнис я фронтенд разработчик Здесь вы
               можете <br /> увидеть мои проекты
             </h5>
-            <button><a target="_blan" href="https://github.com/ernis2005?tab=repositories">проекты</a></button>
+            <button>
+              <a
+                target="_blan"
+                href="https://github.com/ernis2005?tab=repositories"
+              >
+                проекты
+              </a>
+            </button>
           </div>
         </div>
         <div className={styles.block2}>
@@ -49,13 +70,29 @@ const Home: FC = () => {
       </div>
       <div className={styles.header2}>
         <div className={styles.block_skills}>
-          <Block_skills_cards />
+           <Block_skills_cards  />
+           <Block_cards   daa={first}/>
         </div>
-        <div className={styles.bloc_Projects}>
-      
-        </div>
+        <div className={styles.bloc_Projects}></div>
+      </div>
+      <div>
+        
       </div>
     </>
   );
 };
 export default Home;
+export async function getStaticProps() {
+  const res = await axios.get(
+    "https://back-2b4ec-default-rtdb.firebaseio.com/ernis.json"
+  );
+  let daa = res.data;
+  console.log(daa);
+
+  return {
+    props: {
+      daa,
+    },
+    revalidate: 200,
+  };
+}

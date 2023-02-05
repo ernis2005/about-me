@@ -6,9 +6,14 @@ import { TbBrandJavascript, TbBrandReactNative,TbBrandFramer,TbBrandNextjs } fro
 
 import { skills } from "../types/types";
 import { motion,  } from "framer-motion"
-
 import style from "../components/styles.module.scss";
-const Block_skills_cards: FC = () => {
+import axios from "axios";
+ 
+
+const Block_skills_cards = () => {
+  
+
+
     const left = {
         initial: {
           opacity: 0,
@@ -116,10 +121,11 @@ const Block_skills_cards: FC = () => {
          </a>
        </motion.div>
      ))}
+     
    </div>
     </>
- 
   );
 };
 
 export default Block_skills_cards;
+

@@ -21,4 +21,13 @@ export interface skills{
   a:string,
 }
 
+export interface cards{
+  data:  {
+    emal:string,
+    emal2:string,
+    emal3:string,
+    image2:string,
+    key: any
+  }
+}
 

@@ -1,0 +1,33 @@
+.info{
+    font-size: 25px;
+    color: aqua;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 40px;
+}   
+
+.swiper {
+    max-width: 1200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-height: 300px;
+    margin: 40px;
+  }
+  
+  .swiperslide {
+    background-position: center;
+    background-size: cover;
+    max-width: 300px;
+    height: 300px;
+  }
+  
+  .swiperslide img {
+    display: block;
+   max-width: 400px;
+    border-radius: 10px;
+    :hover{
+        border: solid 1px red;
+    }
+
+  }
+  
