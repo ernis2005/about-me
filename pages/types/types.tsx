@@ -27,7 +27,8 @@ export interface cards{
     emal2:string,
     emal3:string,
     image2:string,
-    id: any
-  }
+  
+  },
+  id: string
 }
 

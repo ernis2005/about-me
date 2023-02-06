@@ -9,15 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 import axios from "axios";
 import Block_cards from "./components/Block_cards";
 
-
-
 const Home: FC<any> = ({ daa }) => {
-  const [first, setfirst] = useState<any[]>([]);
-  if (!first){
-    setfirst(
-      [{ernis:"ernis"}]
-    )
-  }
+  
+ 
   useEffect(() => {
     setfirst(() => {
       return Object.keys(daa).map((key) => {
@@ -28,8 +22,8 @@ const Home: FC<any> = ({ daa }) => {
       });
     });
   }, [daa]);
+  const [first, setfirst] = useState<any[]>([]);
   
-console.log(first)
   return (
     <>
       <Head>
@@ -77,14 +71,12 @@ console.log(first)
       </div>
       <div className={styles.header2}>
         <div className={styles.block_skills}>
-           <Block_skills_cards  />
-           <Block_cards   daa={first}/>
+          <Block_skills_cards />
+          <Block_cards data={first} />
         </div>
         <div className={styles.bloc_Projects}></div>
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </>
   );
 };
@@ -94,12 +86,10 @@ export async function getStaticProps() {
     "https://back-2b4ec-default-rtdb.firebaseio.com/ernis.json"
   );
   let daa = res.data;
-  
-
   return {
     props: {
       daa,
     },
-    revalidate: 200,
+    revalidate: 20,
   };
 }
