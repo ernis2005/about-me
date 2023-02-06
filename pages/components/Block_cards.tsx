@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { cards } from "../types/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,6 +17,7 @@ interface Person {
   daa: cards[];
 }
 const Block_cards: FC<Person> = ({ daa }) => {
+
   return (
     <div>
       <div className={s.info}>Проекты</div>

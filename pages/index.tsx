@@ -9,7 +9,15 @@ const inter = Inter({ subsets: ["latin"] });
 import axios from "axios";
 import Block_cards from "./components/Block_cards";
 
+
+
 const Home: FC<any> = ({ daa }) => {
+  const [first, setfirst] = useState<any[]>([]);
+  if (!first){
+    setfirst(
+      [{ernis:"ernis"}]
+    )
+  }
   useEffect(() => {
     setfirst(() => {
       return Object.keys(daa).map((key) => {
@@ -19,10 +27,9 @@ const Home: FC<any> = ({ daa }) => {
         };
       });
     });
-  }, []);
-  const [first, setfirst] = useState<any[]>([]);
-
-  console.log(first);
+  }, [daa]);
+  
+console.log(first)
   return (
     <>
       <Head>
@@ -87,7 +94,7 @@ export async function getStaticProps() {
     "https://back-2b4ec-default-rtdb.firebaseio.com/ernis.json"
   );
   let daa = res.data;
-  console.log(daa);
+  
 
   return {
     props: {
