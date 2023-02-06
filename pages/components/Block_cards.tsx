@@ -36,9 +36,8 @@ const Block_cards: FC<Person> = ({ daa }) => {
                 className={s.mySwipe}
              modules={[EffectCoverflow, Pagination]}
       >
-        {daa.map((res) => (
-      
-             <SwiperSlide key={res.data.key} className={s.swiperslide}>
+        {daa.map((res,index) => (
+             <SwiperSlide key={index} className={s.swiperslide}>
           <img src={res.data.image2}/>
         </SwiperSlide>
         ))}
