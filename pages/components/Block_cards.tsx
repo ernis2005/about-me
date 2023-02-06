@@ -11,6 +11,8 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper";
 
 import s from "./cards.module.scss";
+import Image from "next/image";
+
 
 
 interface Person {
@@ -50,7 +52,15 @@ setTimeout(() => {
            ):(
               data.map((res,) => (
           <SwiperSlide key={res.id} className={s.swiperslide}>
-            <img src={res.data.image2} />
+            <Image 
+            alt="/"
+            layout="fill"
+            objectFit="cover"
+            src={res.data.image2} />
+            <div className={s.name}>
+            <p >{res.data.emal}</p>
+            </div>
+            
           </SwiperSlide>
         ))
            )

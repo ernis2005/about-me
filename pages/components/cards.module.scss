@@ -10,7 +10,7 @@
     max-width: 1200px;
     padding-top: 50px;
     padding-bottom: 50px;
-    
+    text-align: center;
     
   }
   
@@ -18,13 +18,27 @@
     background-position: center;
     background-size: cover;
     width: 300px;
+    text-align: center;
     height: 300px;
   }
   
   .swiperslide img {
     display: block;
    width: 100%;
+   height: 300px;
     border-radius: 10px;
-    
+  }
+  .name{
+    position: relative;
+    z-index: 2;
+    color: aqua;
+    margin: 0 auto;
+    font-size: 24px;
+    width: 100%;
+    font-weight: 800;
+   margin-top: -24px;
+   border-radius:   10px 10px 0 0;
+    background-color: rgba(8, 12, 12, 0.582);
+    text-align: center;
   }
   
