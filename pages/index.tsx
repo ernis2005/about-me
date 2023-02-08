@@ -10,8 +10,8 @@ import axios from "axios";
 import Block_cards from "./components/Block_cards";
 
 const Home: FC<any> = ({ daa }) => {
-  
  
+  
   useEffect(() => {
     setfirst(() => {
       return Object.keys(daa).map((key) => {
@@ -23,7 +23,6 @@ const Home: FC<any> = ({ daa }) => {
     });
   }, [daa]);
   const [first, setfirst] = useState<any[]>([]);
-  
   return (
     <>
       <Head>
@@ -72,7 +71,7 @@ const Home: FC<any> = ({ daa }) => {
       <div className={styles.header2}>
         <div className={styles.block_skills}>
           <Block_skills_cards />
-          <Block_cards data={first} />
+          <Block_cards data={first}  />
         </div>
         <div className={styles.bloc_Projects}></div>
       </div>

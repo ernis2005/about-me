@@ -47,3 +47,15 @@
         }
     }
 }
+
+.button{
+    width: 150px ;
+    height: 40px;
+    background-color: aqua;
+    margin-top: 30px;
+    color: black;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid #00c4f0;
+    filter: drop-shadow(0px 0px 152px rgba(0, 196, 240, 0.42));
+}

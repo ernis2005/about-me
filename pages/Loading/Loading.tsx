@@ -7,6 +7,7 @@ interface Person {
   onClick: () => void;
 }
 const Loading: FC<Person> = ({ onClick }) => {
+  
   return (
     <div className={s.header}>
       <div className={s.block}>

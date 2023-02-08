@@ -121,8 +121,11 @@ const Block_skills_cards = () => {
          </a>
        </motion.div>
      ))}
+
+
      
    </div>
+   <button className={style.button}>Ешо </button>
     </>
   );
 };

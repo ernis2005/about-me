@@ -1,7 +1,8 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Navlinck from './Navlinck/Navlinck'
+
 import { FC } from 'react'
+import Navlinck from './Navlink/Navlinck'
 interface Person{
 
 }

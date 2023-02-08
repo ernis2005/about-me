@@ -2,12 +2,14 @@ import Link from "next/link";
 import React, { FC, ReactNode, useEffect, useState } from "react";
 import Loading from "../Loading/Loading";
 import s from "./style.module.scss";
+
+import { GrGithub } from "react-icons/gr";
 interface Person {
   children: ReactNode;
 }
 
 const Navlinck: FC<Person> = ({ children }) => {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   let LoadingFa = () => {
     setLoading(false);
@@ -25,6 +27,9 @@ const Navlinck: FC<Person> = ({ children }) => {
               <h1>Ernis.com</h1>
             </div>
             <div className={s.lincks}>
+        
+            <a className={s.GrGithub} href="https://github.com/ernis2005"   target="_blan"><GrGithub/></a>
+         
               <Link className={s.linck} href="#">
                 Проекты
               </Link>

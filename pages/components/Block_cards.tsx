@@ -14,17 +14,16 @@ import s from "./cards.module.scss";
 import Image from "next/image";
 
 
-
 interface Person {
   data: cards[];
+
 }
 const Block_cards: FC<Person> = ({ data }) => {
-
- 
-let [loading ,setloading ]=useState(true)
-setTimeout(() => {
-  setloading(()=>false)
-}, 100);
+  let [loading, setloading] = useState<boolean>(true);
+  let [modal, setModal] = useState<boolean>(false);
+  setTimeout(() => {
+    setloading(() => false);
+  }, 100);
   return (
     <div>
       <div className={s.info}>Проекты</div>
@@ -44,28 +43,29 @@ setTimeout(() => {
         className={s.mySwipe}
         modules={[EffectCoverflow, Pagination]}
       >
-        {
-           loading ? (
-            <>
-           loading
-            </>
-           ):(
-              data.map((res,) => (
-          <SwiperSlide key={res.id} className={s.swiperslide}>
-            <Image 
-            alt="/"
-            layout="fill"
-            objectFit="cover"
-            src={res.data.image2} />
-            <div className={s.name}>
-            <p >{res.data.emal}</p>
-            </div>
+        {loading ? (
+          <>
+            <p>loading</p>
+          </>
+        ) : (
+          data.map((res) => (
+            <SwiperSlide key={res.id} className={s.swiperslide}>
+              <Image
+                alt="/"
+                layout="fill"
+                objectFit="cover"
+                src={res.data.image2}
+                
+              />
+              <div className={s.name}>
+                <p>{res.data.emal}</p>
+                
+              </div>
             
-          </SwiperSlide>
-        ))
-           )
-        }
-      
+             
+            </SwiperSlide>
+          ))
+        )}
       </Swiper>
     </div>
   );
