@@ -10,8 +10,8 @@ import axios from "axios";
 import Block_cards from "./components/Block_cards";
 
 const Home: FC<any> = ({ daa }) => {
- 
-  
+  const [first, setfirst] = useState<any[]>([]);
+
   useEffect(() => {
     setfirst(() => {
       return Object.keys(daa).map((key) => {
@@ -22,7 +22,7 @@ const Home: FC<any> = ({ daa }) => {
       });
     });
   }, [daa]);
-  const [first, setfirst] = useState<any[]>([]);
+
   return (
     <>
       <Head>
@@ -71,7 +71,7 @@ const Home: FC<any> = ({ daa }) => {
       <div className={styles.header2}>
         <div className={styles.block_skills}>
           <Block_skills_cards />
-          <Block_cards data={first}  />
+          <Block_cards data={first} />
         </div>
         <div className={styles.bloc_Projects}></div>
       </div>
@@ -81,14 +81,18 @@ const Home: FC<any> = ({ daa }) => {
 };
 export default Home;
 export async function getStaticProps() {
-  const res = await axios.get(
-    "https://back-2b4ec-default-rtdb.firebaseio.com/ernis.json"
-  );
-  let daa = res.data;
-  return {
-    props: {
-      daa,
-    },
-    revalidate: 20,
-  };
+  try {
+    const res = await axios.get(
+      "https://back-2b4ec-default-rtdb.firebaseio.com/ernis.json"
+    );
+    let daa = res.data;
+    return {
+      props: {
+        daa,
+      },
+      revalidate: 20,
+    };
+  } catch (error) {
+    alert("приветь " + error);
+  }
 }

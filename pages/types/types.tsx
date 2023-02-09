@@ -23,9 +23,9 @@ export interface skills{
 
 export interface cards{
   data:  {
-    emal:string,
-    emal2:string,
-    emal3:string,
+    name:string,
+    git:string,
+    versol:string,
     image2:string,
   
   },

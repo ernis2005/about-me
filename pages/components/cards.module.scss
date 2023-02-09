@@ -40,5 +40,24 @@
    border-radius:   10px 10px 0 0;
     background-color: rgba(8, 12, 12, 0.582);
     text-align: center;
+    .info_name{
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      width: 90%;
+      margin: 0 auto;
+     a{
+      color: aqua;
+      margin-top: -10px;
+      border: none;
+      text-decoration: none;
+     }
+    }
   }
-  
+  .modal{
+    position: relative;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
