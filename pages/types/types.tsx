@@ -21,14 +21,27 @@ export interface skills{
   a:string,
 }
 
-export interface cards{
-  data:  {
-    name:string,
-    git:string,
-    versol:string,
-    image2:string,
+// export interface cards{
+//   data:  {
+//     name:string,
+//     git:string,
+//     versol:string,
+//     image2:string,
   
-  },
-  id: string
+//   },
+//   id: string
+// }
+
+export interface cardss{
+  attributes:{
+    img:any
+    name:string;
+    info:string;
+    reactjs:string;
+    git:string,
+   versol:string,
+  }
+
+  id: number
 }
 

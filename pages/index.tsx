@@ -9,19 +9,21 @@ const inter = Inter({ subsets: ["latin"] });
 import axios from "axios";
 import Block_cards from "./components/Block_cards";
 
-const Home: FC<any> = ({ daa }) => {
-  const [first, setfirst] = useState<any[]>([]);
+const Home: FC<any> = ({ daa2 }) => {
+  console.log(daa2);
+  
+  // const [first, setfirst] = useState<any[]>([daa2]);
 
-  useEffect(() => {
-    setfirst(() => {
-      return Object.keys(daa).map((key) => {
-        return {
-          ...daa[key],
-          id: key,
-        };
-      });
-    });
-  }, [daa]);
+  // useEffect(() => {
+  //   setfirst(() => {
+  //     return Object.keys(daa).map((key) => {
+  //       return {
+  //         ...daa[key],
+  //         id: key,
+  //       };
+  //     });
+  //   });
+  // }, [daa]);
 
   return (
     <>
@@ -71,7 +73,7 @@ const Home: FC<any> = ({ daa }) => {
       <div className={styles.header2}>
         <div className={styles.block_skills}>
           <Block_skills_cards />
-          <Block_cards data={first} />
+          <Block_cards data={daa2} />
         </div>
         <div className={styles.bloc_Projects}></div>
       </div>
@@ -82,17 +84,26 @@ const Home: FC<any> = ({ daa }) => {
 export default Home;
 export async function getStaticProps() {
   try {
-    const res = await axios.get(
-      "https://back-2b4ec-default-rtdb.firebaseio.com/ernis.json"
+  
+   
+    const res2 = await axios.get(
+      "https://strapi-admin-ynr6.onrender.com/api/datas?populate=*"
     );
-    let daa = res.data;
+    let daa2 = res2.data.data;
+
     return {
       props: {
-        daa,
+        daa2
       },
       revalidate: 20,
     };
   } catch (error) {
-    alert("приветь " + error);
+    return (
+     <>
+     <h1>
+    {`error`}
+     </h1>
+     </>
+    )
   }
 }

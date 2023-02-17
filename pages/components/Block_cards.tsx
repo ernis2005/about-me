@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { cards } from "../types/types";
+import { cardss } from "../types/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -18,10 +18,11 @@ import { GrGithub } from "react-icons/gr";
 
 
 interface Person {
-  data: cards[];
-
+  data: cardss[];
 }
 const Block_cards: FC<Person> = ({ data }) => {
+  console.log(data);
+  
   let [loading, setloading] = useState<boolean>(true);
   let [modal, setModal] = useState<any>(true);
   setTimeout(() => {
@@ -29,7 +30,7 @@ const Block_cards: FC<Person> = ({ data }) => {
   }, 100);
   return (
     <div>
-      <div className={s.info}>Проекты</div>
+   <div className={s.info}>Проекты</div>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -54,18 +55,20 @@ const Block_cards: FC<Person> = ({ data }) => {
           data.map((res) => (
             <div key={res.id}>
             <SwiperSlide  className={s.swiperslide}>
-              <Image
+                <Image
                 alt="/"
                 layout="fill"
                 objectFit="cover"
-                src={res.data.image2}
-                
-              />
+                src={res.attributes.img.data[0].attributes.url}
+              />   
               <div className={s.name} >
-                <p>{res.data.name}</p>
+                <p>{res.attributes.name}</p> 
                 <div className={s.info_name}>
-                  <a  href={res.data.git} target="_blan"><GrGithub/></a>
-                  <a  href={res.data.versol} target="_blan">ссылка на проект</a>
+                 
+                  <Link className={s.Link} href={`../modal/${res.id}`} >
+                                            подробнее
+                                        </Link>
+                  <a  href={res.attributes.versol} target="_blan">ссылка на проект</a>
                 </div>
               </div>
             </SwiperSlide>
@@ -73,7 +76,7 @@ const Block_cards: FC<Person> = ({ data }) => {
           ))
         )}
       </Swiper>
-  
+   
                
     </div>
   );
