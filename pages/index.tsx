@@ -7,7 +7,7 @@ import Block_skills_cards from "./components/Block_skills_cards";
 
 const inter = Inter({ subsets: ["latin"] });
 import axios from "axios";
-import Block_cards from "./components/Block_cards";
+import Block_cards from "./block";
 
 const Home: FC<any> = ({ daa2 }) => {
   console.log(daa2);
@@ -84,13 +84,10 @@ const Home: FC<any> = ({ daa2 }) => {
 export default Home;
 export async function getStaticProps() {
   try {
-  
-   
     const res2 = await axios.get(
       "https://strapi-admin-ynr6.onrender.com/api/datas?populate=*"
     );
     let daa2 = res2.data.data;
-
     return {
       props: {
         daa2
@@ -100,9 +97,7 @@ export async function getStaticProps() {
   } catch (error) {
     return (
      <>
-     <h1>
-    {`error`}
-     </h1>
+  <h1>ernis</h1>
      </>
     )
   }

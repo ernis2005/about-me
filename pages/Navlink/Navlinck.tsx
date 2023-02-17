@@ -9,7 +9,7 @@ interface Person {
 }
 
 const Navlinck: FC<Person> = ({ children }) => {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
   let LoadingFa = () => {
     setLoading(false);

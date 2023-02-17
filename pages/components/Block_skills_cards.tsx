@@ -8,12 +8,7 @@ import { skills } from "../types/types";
 import { motion,  } from "framer-motion"
 import style from "../components/styles.module.scss";
 import axios from "axios";
- 
-
 const Block_skills_cards = () => {
-  
-
-
     const left = {
         initial: {
           opacity: 0,
@@ -109,12 +104,12 @@ const Block_skills_cards = () => {
    <h3 className={style.skills}>Навыки</h3>
 <div className={style.Block_skills_cards}>
      
-     {data.map((res) => (
+     {data.map((res, i) => (
        <motion.div initial="initial"
        whileInView="animate"
        exit="initial"
 
-       variants={left} key={res.id}>
+       variants={left} key={i}>
          <a target="_blan" href={res.a}>
            <samp>{res.icon}</samp>
            <p>{res.info}</p>
