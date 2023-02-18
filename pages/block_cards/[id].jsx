@@ -34,7 +34,7 @@ const Data = ({ data ,data2}) => {
           </div>
         </div>
         <div>
-        <Block_cards className={s.Block_cards} data={data2} />
+        {/* <Block_cards className={s.Block_cards} data={data2} /> */}
         </div>
       </div>
     </div>
