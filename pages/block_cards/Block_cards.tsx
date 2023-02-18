@@ -14,6 +14,11 @@ interface Person {
   data: cardss[];
 }
 const Block_cards: FC<Person> = ({ data }) => {
+  let [loading, setloading] = useState<boolean>(true);
+  let [modal, setModal] = useState<boolean>(false);
+  setTimeout(() => {
+    setloading(() => false);
+  }, 100);
   return (
     <div>
       <div className={s.info}>Проекты</div>
@@ -33,7 +38,12 @@ const Block_cards: FC<Person> = ({ data }) => {
         className={s.mySwipe}
         modules={[EffectCoverflow, Pagination]}
       >
-        { data.map((res, i) => (
+        { loading ? (
+<>
+loading...
+</>
+          
+        ) :  ( data.map((res, i) => (
           <div key={i}>
             <SwiperSlide className={s.swiperslide}>
               <Image
@@ -55,7 +65,7 @@ const Block_cards: FC<Person> = ({ data }) => {
               </div>
             </SwiperSlide>
           </div>
-        ))}
+        )))}
       </Swiper>
     </div>
   );
