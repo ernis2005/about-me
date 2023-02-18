@@ -17,7 +17,7 @@ const Data = ({ data ,data2}) => {
               className={s.image}
               alt="/"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               src={data.attributes.img.data[0].attributes.url}
             />
           </div>
@@ -34,7 +34,7 @@ const Data = ({ data ,data2}) => {
           </div>
         </div>
         <div>
-        <Block_cards data={data2} />
+        <Block_cards className={s.Block_cards} data={data2} />
         </div>
       </div>
     </div>
