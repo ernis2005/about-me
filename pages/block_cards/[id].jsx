@@ -5,7 +5,7 @@ import Link from "next/link";
 import s from "./modal.module.scss";
 import Image from "next/image";
 import { GrGithub } from "react-icons/gr";
-import Block_cards from ".";
+import Block_cards from "./Block_cards";
 const Data = ({ data ,data2}) => {
   return (
     <div className={s.header}>

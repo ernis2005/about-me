@@ -7,7 +7,7 @@ import Block_skills_cards from "./components/Block_skills_cards";
 
 const inter = Inter({ subsets: ["latin"] });
 import axios from "axios";
-import Block_cards from "./block_cards";
+import Block_cards from "./block_cards/Block_cards";
 
 const Home: FC<any> = ({ daa2 }) => {
   console.log(daa2);
