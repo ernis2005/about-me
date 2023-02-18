@@ -9,7 +9,7 @@ import s from "./cards.module.scss";
 import Image from "next/image";
 
 import Link from "next/link";
-import { GrGithub } from "react-icons/gr";
+
 interface Person {
   data: cardss[];
 }
@@ -33,7 +33,7 @@ const Block_cards: FC<Person> = ({ data }) => {
         className={s.mySwipe}
         modules={[EffectCoverflow, Pagination]}
       >
-        { data &&data.map((res, i) => (
+        { data.map((res, i) => (
           <div key={i}>
             <SwiperSlide className={s.swiperslide}>
               <Image
@@ -45,7 +45,7 @@ const Block_cards: FC<Person> = ({ data }) => {
               <div className={s.name}>
                 <p>{res.attributes.name}</p>
                 <div className={s.info_name}>
-                  <Link className={s.Link} href={`/block/${res.id}`}>
+                  <Link className={s.Link} href={`/block_cards/${res.id}`}>
                     подробнее
                   </Link>
                   <a href={res.attributes.versol} target="_blan">
