@@ -17,7 +17,7 @@ const Data = ({ data ,data2}) => {
               className={s.image}
               alt="/"
               layout="fill"
-              objectFit="contain"
+              objectFit="fill"
               src={data.attributes.img.data[0].attributes.url}
             />
           </div>
