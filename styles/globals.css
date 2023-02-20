@@ -5,11 +5,15 @@
     margin: 0;
     padding: 0;
     color-scheme: dark;
+
   }
 }
 body {
   margin: 0;
+  cursor: none;
   padding: 0;
+  
   color: rgb(rgb(24, 169, 236), );
   background-color: #2A2A2A;
+ 
 }

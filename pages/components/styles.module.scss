@@ -59,3 +59,59 @@
     border: 1px solid #00c4f0;
     filter: drop-shadow(0px 0px 152px rgba(0, 196, 240, 0.42));
 }
+.cinputEl {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim;
+    pointer-events: none;
+    z-index: 11121212;
+  }
+  
+  .cinputEl::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: 0.5;
+    top: 100%;
+    left: 100%;
+    right: 50%;
+    bottom: 50%;
+    animation: cursorAnim2;
+  }
+  
+  .cinputEl::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    animation: cursorAnim2e;
+  }
+  
+  @keyframes cursorAnim {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.7);
+    }
+  }
+  
+  .expand {
+    transform: scale(1.2);
+    border: 1px solid red;
+  }
+  

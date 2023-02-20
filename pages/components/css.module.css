@@ -1,0 +1,25 @@
+.cursor{
+  background-color: #fbff00;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.cursor2{
+  border: 1px solid rgb(255, 6, 6);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: .1s;
+  border: 1px solid #00c4f0;
+ box-shadow:  6px beige;
+}
