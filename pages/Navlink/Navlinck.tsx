@@ -4,6 +4,7 @@ import Loading from "../Loading/Loading";
 import s from "./style.module.scss";
 
 import { GrGithub } from "react-icons/gr";
+import AnimCursor from "../AnimCursor";
 interface Person {
   children: ReactNode;
 }
@@ -22,6 +23,7 @@ const Navlinck: FC<Person> = ({ children }) => {
         </div>
       ) : (
         <header className={s.header}>
+         <AnimCursor/>  
           <div className={s.menu}>
             <div className={s.block_menu}>
               <h1>Ernis.com</h1>
