@@ -15,11 +15,11 @@
   height: 20px;
   border-radius: 50%;
   position: fixed;
-  z-index: 100000;
+  z-index: 1000;
   top: 0;
   left: 0;
   pointer-events: none;
   transition: .1s;
   border: 1px solid #00c4f0;
- box-shadow:  6px beige;
+ 
 }

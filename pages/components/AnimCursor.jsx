@@ -6,9 +6,12 @@ function AnimCursor() {
     const [mouse ,setMouse] =  React.useState({
         x:0,
         y:0,
-
     })
-    console.log(mouse);
+    const [mouse2 ,setMouse2] =  React.useState({
+        x:0,
+        y:0,
+    })
+    console.log(mouse2);
     React.useEffect(()=>{
         const mouseMove =e=>{
            setMouse({
@@ -22,6 +25,19 @@ function AnimCursor() {
             window.removeEventListener('mousemove',mouseMove)
         }
     }, [ ])
+    React.useEffect(()=>{
+        const mouseMove2 =e=>{
+           setMouse2({
+            x:e.clientX,
+            y:e.clientY
+           })
+
+        }
+        window.addEventListener('mousemove', mouseMove2);
+        return ()=>{
+            window.removeEventListener('mousemove',mouseMove2)
+        }
+    }, [ ])
     const variants={
         default:{
             x:mouse.x-1,
@@ -33,9 +49,8 @@ function AnimCursor() {
     
     const variants2={
         default:{
-            x:mouse.x-10,
-            y:mouse.y-10,
-
+            x:mouse2.x-10,
+            y:mouse2.y-10,
         }
         
     }
@@ -49,7 +64,7 @@ function AnimCursor() {
       whileInView="animate"
       exit="initial"
 
-      className={s.cursor}/>
+      className={s.cursor}></motion.div>
            <motion.div 
       variants={variants2}
       animate="default"
@@ -57,7 +72,7 @@ function AnimCursor() {
       whileInView="animate"
       exit="initial"
 
-      className={s.cursor2}/>
+      className={s.cursor2}></motion.div>
     </div>
   )
 }
