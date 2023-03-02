@@ -8,16 +8,11 @@ import { GrGithub } from "react-icons/gr";
   import AnimCursor from "../components/AnimCursor";
 interface Person {
   children: ReactNode;
- 
 }
 
 
 const Navlinck: FC<Person> = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(false);
-  
-
-
-
   let LoadingFa = () => {
     setLoading(false);
   };
@@ -38,7 +33,7 @@ const Navlinck: FC<Person> = ({ children }) => {
             </div>
             <div className={s.lincks}>
         
-            <a className={s.GrGithub} href="https://github.com/ernis2005"   target="_blan"><GrGithub/></a>
+            <a className={s.GrGithub} href="https://github.com/ernis2005"target="_blan"><GrGithub/></a>
          
               <Link className={s.linck} href="#">
                 Проекты
@@ -50,8 +45,6 @@ const Navlinck: FC<Person> = ({ children }) => {
           </div>
           <div>{children}</div>
           <div>er</div>
-     
-        
         </header>
       )}
     </div>

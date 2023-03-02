@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/block_cards/[id].jsx", "pages/components/AnimCursor.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/block_cards/[id].jsx", "pages/components/AnimCursor.jsx", "pages/Navlink/Navlinck.tsx"],
   "exclude": ["node_modules"]
 }

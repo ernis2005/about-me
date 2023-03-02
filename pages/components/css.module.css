@@ -9,7 +9,7 @@
   left: 0;
   pointer-events: none;
 }
-.cursor2{
+.cursor2 {
   border: 1px solid rgb(255, 6, 6);
   width: 20px;
   height: 20px;
@@ -21,5 +21,17 @@
   pointer-events: none;
   transition: .1s;
   border: 1px solid #00c4f0;
- 
+}
+a h1 h2 button .cursor2 :hover{
+  border: 1px solid rgb(255, 6, 6);
+  width: 50px;
+  height: 40px;
+  
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: .1s;
+  border: 1px solid #00c4f0;
 }

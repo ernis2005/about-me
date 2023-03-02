@@ -11,7 +11,6 @@ function AnimCursor() {
         x:0,
         y:0,
     })
-    console.log(mouse2);
     React.useEffect(()=>{
         const mouseMove =e=>{
            setMouse({
@@ -42,19 +41,14 @@ function AnimCursor() {
         default:{
             x:mouse.x-1,
             y:mouse.y,
-
-        }
-        
+        }   
     }
-    
     const variants2={
         default:{
             x:mouse2.x-10,
             y:mouse2.y-10,
         }
-        
     }
-    
   return (
     <div>
       <motion.div 
