@@ -39,9 +39,10 @@ const Navlinck: FC<Person> = ({ children }) => {
             <a className={s.GrGithu} href="https://t.me/Ernis00"target="_blan"><ImTelegram/></a>
          
               <Link className={s.linck} href="#">
+            
                 Проекты
               </Link>
-              <Link className={s.linck} href="#">
+              <Link className={s.linck} href={'../anbut'}>
                 О нас
               </Link>
             </div>

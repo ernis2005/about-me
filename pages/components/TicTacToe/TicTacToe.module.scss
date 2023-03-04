@@ -1,0 +1,19 @@
+ .table td{
+    border:  1px solid grey;
+    width: 100px;
+    height: 100px;
+   
+ }
+ .contener{
+    display: flex;
+    justify-content: center;
+    max-width: 340px;
+    margin: 0 auto;
+    flex-direction: column;
+    button{
+        max-width: 100px;
+        margin:  0 auto;
+        margin-top:  10px;
+        color:rgb(24, 169, 236 ) ;
+    }
+ }
