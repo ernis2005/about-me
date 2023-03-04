@@ -4,6 +4,8 @@ import Loading from "../Loading/Loading";
 import s from "./style.module.scss";
 
 
+import { ImTelegram } from "react-icons/im";
+
 import { GrGithub } from "react-icons/gr";
   import AnimCursor from "../components/AnimCursor";
 interface Person {
@@ -34,6 +36,7 @@ const Navlinck: FC<Person> = ({ children }) => {
             <div className={s.lincks}>
         
             <a className={s.GrGithub} href="https://github.com/ernis2005"target="_blan"><GrGithub/></a>
+            <a className={s.GrGithu} href="https://t.me/Ernis00"target="_blan"><ImTelegram/></a>
          
               <Link className={s.linck} href="#">
                 Проекты
@@ -44,7 +47,7 @@ const Navlinck: FC<Person> = ({ children }) => {
             </div>
           </div>
           <div>{children}</div>
-          <div>er</div>
+           
         </header>
       )}
     </div>

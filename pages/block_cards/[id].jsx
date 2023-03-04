@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
@@ -6,7 +5,7 @@ import s from "./modal.module.scss";
 import Image from "next/image";
 import { GrGithub } from "react-icons/gr";
 import Block_cards from "./Block_cards";
-const Data = ({ data ,data2}) => {
+const Data = ({ data, data2 }) => {
   return (
     <>
       <Head>
@@ -16,38 +15,38 @@ const Data = ({ data ,data2}) => {
         <link rel="icon" href="/logo.png" />
       </Head>
       <div className={s.header}>
-     
-      <Link href="/">назать</Link>
-      <div className={s.content}>
-        <div className={s.block}>
-          <div className={s.image}>
-            <Image
-              className={s.image}
-              alt="/"
-              layout="fill"
-              objectFit="fill"
-              src={data.attributes.img.data[0].attributes.url}
-            />
-          </div>
-          <div className={s.info}>
-            <h2> {data.attributes.name}</h2>
-            <h3>
-              Написина на {data.attributes.reactjs}
-            </h3>
-            <p> {data.attributes.info}</p>
-            <div>
-              <a href={data.attributes.git} target="_blan"><GrGithub/></a>
-              <a href={data.attributes.versol} target="_blan">ссылка на проект</a>
+        <Link href="/">назать</Link>
+        <div className={s.content}>
+          <div className={s.block}>
+            <div className={s.image}>
+              <Image
+                className={s.image}
+                alt="/"
+                layout="fill"
+                objectFit="fill"
+                src={data.attributes.img.data[0].attributes.url}
+              />
+            </div>
+            <div className={s.info}>
+              <h2> {data.attributes.name}</h2>
+              <h3>Написина на {data.attributes.reactjs}</h3>
+              <p> {data.attributes.info}</p>
+              <div>
+                <a href={data.attributes.git} target="_blan">
+                  <GrGithub />
+                </a>
+                <a href={data.attributes.versol} target="_blan">
+                  ссылка на проект
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-         <Block_cards className={s.Block_cards} data={data2} /> 
+          <div>
+            <Block_cards className={s.Block_cards} data={data2} />
+          </div>
         </div>
       </div>
-    </div>
     </>
-    
   );
 };
 export default Data;
@@ -77,7 +76,7 @@ export async function getStaticProps({ params: { id } }) {
   let data = res.data.data;
   return {
     props: {
-       data2,
+      data2,
       data,
     },
     revalidate: 2,

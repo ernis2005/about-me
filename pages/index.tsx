@@ -11,7 +11,7 @@ import Block_cards from "./block_cards/Block_cards";
 
 const Home: FC<any> = ({ daa2 }) => {
   console.log(daa2);
-  
+
   // const [first, setfirst] = useState<any[]>([daa2]);
 
   // useEffect(() => {
@@ -96,9 +96,9 @@ export async function getStaticProps() {
     };
   } catch (error) {
     return (
-     <>
-  <h1>ernis</h1>
-     </>
+      <>
+        <h1>ernis</h1>
+      </>
     )
   }
 }

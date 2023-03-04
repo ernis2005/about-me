@@ -22,7 +22,7 @@
   transition: .1s;
   border: 1px solid #00c4f0;
 }
-a h1 h2 button .cursor2 :hover{
+a h1 h2 button .cursor2:hover{
   border: 1px solid rgb(255, 6, 6);
   width: 50px;
   height: 40px;

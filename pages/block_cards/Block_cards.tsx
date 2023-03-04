@@ -38,12 +38,11 @@ const Block_cards: FC<Person> = ({ data }) => {
         className={s.mySwipe}
         modules={[EffectCoverflow, Pagination]}
       >
-        { loading ? (
-<>
-loading...
-</>
-          
-        ) :  ( data.map((res, i) => (
+        {loading ? (
+          <>
+            loading...
+          </>
+        ) : (data.map((res, i) => (
           <div key={i}>
             <SwiperSlide className={s.swiperslide}>
               <Image
